@@ -7,7 +7,11 @@ import Rank from "./components/rank";
 import GitStats from "./components/stats";
 
 async function getGitProfile() {
-  const res = await fetch(`https://api.github.com/users/${userData.githubUser}`)
+  const res = await fetch(`https://api.github.com/users/${userData.githubUser}`,{
+    headers: {
+      Authorization: `token ${process.env.GITHUB_TOKEN}`
+    }
+  })
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
