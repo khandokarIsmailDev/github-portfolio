@@ -24,7 +24,7 @@ function GitStats() {
           </GlowCard>
         </div>
 
-        <>
+        {/* <>
           <GlowCard identifier="github-stats">
             <Image
               src={`https://github-readme-stats.vercel.app/api?username=${userData.githubUser}&show_icons=true&include_all_commits=true&theme=algolia&hide_border=true`}
@@ -42,7 +42,7 @@ function GitStats() {
               className="rounded-lg"
             />
           </GlowCard>
-        </>
+        </> */}
       </div>
     </div>
   );
